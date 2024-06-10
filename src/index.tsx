@@ -3,6 +3,9 @@ import App from "./app/App";
 import {BrowserRouter} from "react-router-dom";
 import {ThemeProvider} from "app/providers/ThemeProvider";
 
+import 'shared/config/i18n';
+import {I18nextProvider} from "react-i18next";
+
 render(
 	<BrowserRouter>
 		<ThemeProvider>
