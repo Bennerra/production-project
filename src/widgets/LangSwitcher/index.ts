@@ -1,1 +1,1 @@
-export { LangSwitcher } from './LangSwitcher'
+export { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher'
