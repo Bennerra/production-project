@@ -1,36 +1,38 @@
 module.exports = {
-    "env": {
+    env: {
         "browser": true,
         "es2021": true,
         "jest": true
     },
-    "extends": [
+    extends: [
         "standard-with-typescript",
         "plugin:react/recommended",
-        "plugin:i18next/recommended"
+        "plugin:i18next/recommended",
+        "plugin:@typescript-eslint/recommended-type-checked",
     ],
-    "overrides": [
+    overrides: [
         {
-            "env": {
-                "node": true
+            env: {
+                node: true
             },
-            "files": [
+            files: [
                 ".eslintrc.{js,cjs}"
             ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
         }
     ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+    parserOptions: {
+        project: true,
+        ecmaVersion: "latest",
+        sourceType: "module",
+        tsconfigRootDir: __dirname,
     },
-    "plugins": [
+    plugins: [
         "react",
-        "i18next"
+        "i18next",
+        '@typescript-eslint'
     ],
-    "rules": {
+    parser: '@typescript-eslint/parser',
+    rules: {
         "no-console": 1,
         "@typescript-eslint/no-unused-vars": "warn",
         "quotes": ["error", "single"],
@@ -47,10 +49,10 @@ module.exports = {
         "no-tabs": "off",
         "@typescript-eslint/prefer-nullish-coalescing": "off",
         "@typescript-eslint/naming-convention": "off",
-        "i18next/no-literal-string": ["warning", { markupOnly: true }],
+        "i18next/no-literal-string": [1, { markupOnly: true }],
         "max-len": ["error", { "ignoreComments": true }],
     },
     globals: {
-      "__IS__DEV__": true
+      __IS__DEV__: true
     }
 }
