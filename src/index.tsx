@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'app/providers/ThemeProvider'
 
 import 'shared/config/i18n'
-import { I18nextProvider } from 'react-i18next'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 render(
   <BrowserRouter>
