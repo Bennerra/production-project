@@ -6,6 +6,7 @@ import { ThemeProvider } from 'app/providers/ThemeProvider'
 import { ErrorBoundary } from 'app/providers/ErrorBoundary'
 
 import 'shared/config/i18n'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 render(
   <BrowserRouter>
