@@ -9,6 +9,7 @@ module.exports = {
         "plugin:react/recommended",
         "plugin:i18next/recommended",
         "plugin:@typescript-eslint/recommended-type-checked",
+        "plugin:storybook/recommended"
     ],
     overrides: [
         {
@@ -16,12 +17,15 @@ module.exports = {
                 node: true
             },
             files: [
-                ".eslintrc.{js,cjs}"
+                "**/src/**/*.test.{ts,tsx}"
             ],
+            rules: {
+                'i18next/no-literal-string': 'off'
+            }
         }
     ],
     parserOptions: {
-        project: true,
+        project: "./tsconfig.json",
         ecmaVersion: "latest",
         sourceType: "module",
         tsconfigRootDir: __dirname,
@@ -29,7 +33,7 @@ module.exports = {
     plugins: [
         "react",
         "i18next",
-        '@typescript-eslint'
+        '@typescript-eslint',
     ],
     parser: '@typescript-eslint/parser',
     rules: {
@@ -50,7 +54,7 @@ module.exports = {
         "@typescript-eslint/prefer-nullish-coalescing": "off",
         "@typescript-eslint/naming-convention": "off",
         "i18next/no-literal-string": [1, { markupOnly: true }],
-        "max-len": ["error", { "ignoreComments": true }],
+        "max-len": ["error", { "ignoreComments": true, "ignorePattern": "^\\data-testid*<" }],
     },
     globals: {
       __IS__DEV__: true
