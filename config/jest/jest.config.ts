@@ -4,7 +4,7 @@
  */
 
 import type { Config } from 'jest'
-import path from "path";
+import path from 'path'
 
 const config: Config = {
 
@@ -40,12 +40,12 @@ const config: Config = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
+    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
   ],
 
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
-    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
   },
 
   setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts']
