@@ -14,7 +14,7 @@
       "*": ["./src/*"]
     },
     "strictNullChecks": true,
-    "types": ["@testing-library/jest-dom"]
+    "types": ["@testing-library/jest-dom", "node"]
   },
   "ts-node": {
     "compilerOptions": {

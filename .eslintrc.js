@@ -46,7 +46,10 @@ module.exports = {
     'no-multiple-empty-lines': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/jsx-filename-extension': [1, {
+      extensions:
+        ['.js', '.jsx', '.ts', '.tsx']
+    }],
     '@typescript-eslint/strict-boolean-expressions': 'warn',
     '@typescript-eslint/explicit-function-return-type': 'off',
     'no-mixed-spaces-and-tabs': 'off',
@@ -54,8 +57,16 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/naming-convention': 'off',
     'i18next/no-literal-string': [1, { markupOnly: true }],
-    'max-len': ['error', { ignoreComments: true, ignorePattern: '^\\data-testid*<' }],
-    'n/handle-callback-err': 'off'
+    'max-len': ['error', {
+      ignoreComments: true,
+      ignorePattern: '^\\data-testid*<'
+    }],
+    'n/handle-callback-err': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'react/display-name': 'off',
+    '@typescript-eslint/no-unsafe-return': 'warn',
+    '@typescript-eslint/no-unsafe-argument': 'warn',
+    '@typescript-eslint/no-unsafe-member-access': 'warn'
   },
   globals: {
     __IS__DEV__: true
