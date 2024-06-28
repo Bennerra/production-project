@@ -1,14 +1,18 @@
 // eslint-disable-next-line react/no-deprecated
-import { render } from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import App from './app/App'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'app/providers/ThemeProvider'
 import { ErrorBoundary } from 'app/providers/ErrorBoundary'
 
 import 'shared/config/i18n'
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-render(
+const root = ReactDOM.createRoot(
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  document.getElementById('root')!
+)
+
+root.render(
   <BrowserRouter>
     <ErrorBoundary>
       <ThemeProvider>
@@ -16,6 +20,5 @@ render(
       </ThemeProvider>
 
     </ErrorBoundary>
-  </BrowserRouter>,
-  document.getElementById('root')
+  </BrowserRouter>
 )
