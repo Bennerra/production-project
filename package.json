@@ -12,8 +12,9 @@
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "test:unit": "jest --config='./config/jest/jest.config.ts'",
-    "test:ui": "npx loki test",
-    "test:ui:ok": "npx loki test approve",
+    "test:ui": "loki test",
+    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:ok": "loki test approve",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook"
   },

@@ -25,3 +25,7 @@ jobs:
         run: yarn lint:ts
       - name: unit testing
         run: yarn test:unit
+      - name: build storybook
+        run: yarn storybook:build
+      - name: screenshot testing
+        run: yarn test:ui:ci
